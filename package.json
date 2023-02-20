@@ -8,14 +8,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/belie369/result-summary-component.git"
+		"url": "git+https://github.com/belie369/frontend-mentor-result-summary-component.git"
 	},
 	"author": "belie <katarzyna.derbich@gmail.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/belie369/result-summary-component/issues"
+		"url": "https://github.com/belie369/frontend-mentor-result-summary-component/issues"
 	},
-	"homepage": "https://github.com/belie369/result-summary-component#readme",
+	"homepage": "https://github.com/belie369/frontend-mentor-result-summary-component#readme",
 	"devDependencies": {
 		"@babel/core": "^7.18.5",
 		"@babel/preset-env": "^7.18.2",

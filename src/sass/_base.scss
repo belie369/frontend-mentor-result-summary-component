@@ -1,4 +1,19 @@
-//neutral colors
+// media query manager
+@mixin respond($breakpoint) {
+	@if $breakpoint == medium {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == large {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}
+}
+
+// neutral colors
 $white: hsl(0, 0%, 100%);
 $pale-blue: hsl(221, 100%, 96%);
 $light-lavender: hsl(241, 100%, 89%);

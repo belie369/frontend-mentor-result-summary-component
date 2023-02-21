@@ -1,0 +1,20 @@
+@use './base' as b;
+
+.component {
+	display: flex;
+	flex-direction: column;
+
+	@include b.respond(large) {
+		flex-direction: row;
+	}
+
+	&__result {
+		padding: 1.5em;
+		background-color: b.$light-royal-blue;
+		text-align: center;
+	}
+
+	&__summary {
+		padding: 1.5em;
+	}
+}

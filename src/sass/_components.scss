@@ -6,6 +6,8 @@
 
 	@include b.respond(large) {
 		flex-direction: row;
+		height: 51.2rem;
+		width: 73.6rem;
 	}
 
 	&__result {
@@ -13,14 +15,18 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		height: 95vw;
 		min-height: 35.5rem;
-		max-height: 35.5rem;
 		padding: 0.7em 0 2em;
-		background-image: linear-gradient(b.$light-slate-blue, b.$light-royal-blue);
+		background-image: linear-gradient(b.$light-slate-blue 2%, b.$light-royal-blue 100%);
 		color: b.$light-lavender;
 		font-size: 1.5rem;
 		text-align: center;
+		border-radius: 0 0 30px 30px;
+
+		@include b.respond(large) {
+			flex-basis: 50%;
+			border-radius: 30px;
+		}
 	}
 
 	&__result-heading {
@@ -33,10 +39,9 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 0.5em;
-		// margin: 0.4em auto;
 		background-image: linear-gradient(b.$violet-blue, b.$persian-blue);
-		height: 2.5em;
-		width: 2.5em;
+		height: 2.6em;
+		width: 2.6em;
 		color: b.$white;
 		font-size: 5.4rem;
 		font-weight: 700;
@@ -51,7 +56,6 @@
 	}
 
 	&__result-text {
-		// margin-bottom: 0.8em;
 		color: b.$white;
 		font-size: 2.2rem;
 	}
@@ -61,13 +65,21 @@
 	}
 
 	&__summary {
-		padding: 1.5em;
+		padding: 1.2em;
+		// width: 100%;
+
+		@include b.respond(large) {
+			flex-basis: 50%;
+		}
 	}
 }
 
 .footer {
-	position: fixed;
-	bottom: 0;
 	padding: 1em;
 	font-size: 1.4rem;
+
+	@include b.respond(large) {
+		position: fixed;
+		bottom: 0;
+	}
 }

@@ -25,6 +25,7 @@
 
 		@include b.respond(large) {
 			flex-basis: 50%;
+			padding: 1.2em 0 2em;
 			border-radius: 30px;
 		}
 	}
@@ -32,6 +33,11 @@
 	&__result-heading {
 		margin-bottom: 0.8em;
 		font-size: 1.8rem;
+
+		@include b.respond(large) {
+			margin-bottom: 0.6em;
+			font-size: 2.4rem;
+		}
 	}
 
 	&__result-score {
@@ -47,26 +53,48 @@
 		font-weight: 700;
 		border-radius: 50%;
 
+		@include b.respond(large) {
+			margin-bottom: 0em;
+			height: 2.8em;
+			width: 2.8em;
+			font-size: 7.2rem;
+			font-weight: 700;
+		}
+
 		&--full {
 			display: block;
 			color: b.$light-lavender-2;
 			font-size: 1.4rem;
 			font-weight: normal;
+
+			@include b.respond(large) {
+				font-size: 1.8rem;
+				transform: translateY(-0.5em);
+			}
 		}
 	}
 
 	&__result-text {
 		color: b.$white;
 		font-size: 2.2rem;
+
+		@include b.respond(large) {
+			font-size: 3.2rem;
+			font-weight: 500;
+		}
 	}
 
 	&__result-details {
 		width: 70%;
+
+		@include b.respond(large) {
+			font-size: 1.8rem;
+			transform: translateY(-0.3em);
+		}
 	}
 
 	&__summary {
 		padding: 1.2em;
-		// width: 100%;
 
 		@include b.respond(large) {
 			flex-basis: 50%;

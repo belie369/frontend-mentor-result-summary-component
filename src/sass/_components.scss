@@ -9,7 +9,7 @@
 		height: 51.2rem;
 		width: 73.6rem;
 		border-radius: 30px;
-		box-shadow: 15px 30px 30px b.$dark-gray-blue-3;
+		box-shadow: 15px 15px 30px b.$dark-gray-blue-3;
 	}
 
 	&__result {
@@ -103,7 +103,7 @@
 
 		@include b.respond(large) {
 			flex-basis: 50%;
-			padding: 1.5em 2.2em;
+			padding: 2em 2.2em;
 		}
 	}
 
@@ -113,7 +113,7 @@
 		font-weight: 800;
 
 		@include b.respond(large) {
-			margin-bottom: 1.6em;
+			margin-bottom: 1.2em;
 			font-size: 2.4rem;
 		}
 	}
@@ -196,6 +196,7 @@
 
 		@include b.respond(large) {
 			font-size: 1.8rem;
+			font-weight: 500;
 		}
 	}
 

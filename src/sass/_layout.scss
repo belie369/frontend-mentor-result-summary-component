@@ -1,0 +1,10 @@
+@use './base' as b;
+
+.component {
+	display: flex;
+	flex-direction: column;
+
+    @include b.respond(large) {
+		flex-direction: row;
+	}
+}

@@ -10,34 +10,18 @@ const fetchData = () => {
 const summaryListFiller = (data) => {
 	for (const el of data) {
 		const singleLi = liTemp.content.cloneNode(true);
+
+		const wholeLi = singleLi.querySelector('.component__summary-item');
+		const nameCategoryLi = (singleLi.querySelector('.component__summary-item-name').textContent = el.category);
 		singleLi.querySelector('.component__summary-item-icon').src = el.icon;
-		singleLi.querySelector('.component__summary-item-name').textContent = el.category;
 		singleLi.querySelector('.component__summary-item-score--value').textContent = el.score;
+
+		const lowerNameCategory = nameCategoryLi.toLowerCase();
+		wholeLi.classList.add(`component__summary-item--${lowerNameCategory}`);
 
 		summaryUl.append(singleLi);
 	}
 };
-
-// const addingClassColor = () => {
-// 	const liCollection = document.getElementsByClassName('component__summary-item');
-
-// 	for (var i = 0; i < liCollection.length; i++) {
-// 		console.log(liCollection[i]);
-// 	}
-// };
-
-// switch (expr) {
-// 	case 'Oranges':
-// 		console.log('Oranges are $0.59 a pound.');
-// 		break;
-// 	case 'Mangoes':
-// 	case 'Papayas':
-// 		console.log('Mangoes and papayas are $2.79 a pound.');
-// 		// Expected output: "Mangoes and papayas are $2.79 a pound."
-// 		break;
-// 	default:
-// 		console.log(`Sorry, we are out of ${expr}.`);
-// }
 
 document.addEventListener('DOMContentLoaded', () => {
 	fetchData();

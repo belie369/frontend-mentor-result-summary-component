@@ -2,7 +2,7 @@ const summaryUl = document.querySelector('.component__summary-details');
 const liTemp = document.querySelector('.li-temp');
 
 const fetchData = () => {
-	fetch('../../data.json')
+	fetch('./data.json')
 		.then((response) => response.json())
 		.then((data) => {
 			const totalScore = summaryListFiller(data);

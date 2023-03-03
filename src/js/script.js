@@ -4,10 +4,15 @@ const liTemp = document.querySelector('.li-temp');
 const fetchData = () => {
 	fetch('../data.json')
 		.then((response) => response.json())
-		.then((data) => summaryListFiller(data));
+		.then((data) => {
+			const totalScore = summaryListFiller(data);
+			averageScore(totalScore, data.length);
+		});
 };
 
 const summaryListFiller = (data) => {
+	let sumScore = 0;
+
 	for (const el of data) {
 		const singleLi = liTemp.content.cloneNode(true);
 
@@ -20,7 +25,20 @@ const summaryListFiller = (data) => {
 		wholeLi.classList.add(`component__summary-item--${lowerNameCategory}`);
 
 		summaryUl.append(singleLi);
+
+		sumScore += el.score;
 	}
+
+	return sumScore;
+};
+
+const averageScore = (totalScore, elements) => {
+	const scoreRoundSpan = document.querySelector('.component__result-score--round');
+
+	const resultScore = Math.round(totalScore / elements);
+	console.log(resultScore);
+
+	scoreRoundSpan.textContent = resultScore;
 };
 
 document.addEventListener('DOMContentLoaded', () => {

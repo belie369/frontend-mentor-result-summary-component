@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Results summary component</title>
   <link rel="icon" type="image/png" sizes="32x32" href='./dist/img/favicon-32x32.png'>
+  <script defer="" src="./dist/js/script.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
@@ -28,51 +29,20 @@
       <div class="component__summary">
         <h2 class="component__summary-heading">Summary</h2>
         <ul class="component__summary-details">
-          <li class="component__summary-item component__summary-item--reaction">
-            <div class="component__summary-item-box-left">
-              <img class="component__summary-item-icon" aria-hidden="true" alt="Reaction icon"
-                src="./dist/img/icon-reaction.svg">
-              <p class="component__summary-item-name">Reaction</p>
-            </div>
-            <div class="component__summary-item-box-right">
-              <p class="component__summary-item-score">80<span class="component__summary-item-score--full"> / 100</span>
-              </p>
-            </div>
-          </li>
-          <li class="component__summary-item component__summary-item--memory">
-            <div class="component__summary-item-box-left">
-              <img class="component__summary-item-icon" aria-hidden="true" alt="Memory icon"
-                src="./dist/img/icon-memory.svg">
-              <p class="component__summary-item-name">Memory</p>
-            </div>
-            <div class="component__summary-item-box-right">
-              <p class="component__summary-item-score">92<span class="component__summary-item-score--full"> / 100</span>
-              </p>
-            </div>
-          </li>
-          <li class="component__summary-item component__summary-item--verbal">
-            <div class="component__summary-item-box-left">
-              <img class="component__summary-item-icon" aria-hidden="true" alt="Verbal icon"
-                src="./dist/img/icon-verbal.svg">
-              <p class="component__summary-item-name">Verbal</p>
-            </div>
-            <div class="component__summary-item-box-right">
-              <p class="component__summary-item-score">61<span class="component__summary-item-score--full"> / 100</span>
-              </p>
-            </div>
-          </li>
-          <li class="component__summary-item component__summary-item--visual">
-            <div class="component__summary-item-box-left">
-              <img class="component__summary-item-icon" aria-hidden="true" alt="Visual icon"
-                src="./dist/img/icon-visual.svg">
-              <p class="component__summary-item-name">Visual</p>
-            </div>
-            <div class="component__summary-item-box-right">
-              <p class="component__summary-item-score">72
-                <span class="component__summary-item-score--full"> / 100</span>
-              </p>
-            </div>
-          </li>
+          <template class="li-temp">
+            <li class="component__summary-item">
+              <div class="component__summary-item-box-left">
+                <img class="component__summary-item-icon" aria-hidden="true" alt="Reaction icon" src="">
+                <p class="component__summary-item-name"></p>
+              </div>
+              <div class="component__summary-item-box-right">
+                <p class="component__summary-item-score"><span class="component__summary-item-score--value"></span><span
+                    class="component__summary-item-score--full"> /
+                    100</span>
+                </p>
+              </div>
+            </li>
+          </template>
         </ul>
         <button class="btn component__summary-btn">Continue</button>
       </div>

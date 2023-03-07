@@ -236,6 +236,14 @@
 		&:hover::before {
 			height: 100%;
 		}
+
+		&:focus::before {
+			height: 100%;
+		}
+
+		&:active {
+			transform: translateY(0.2rem);
+		}
 	}
 }
 
